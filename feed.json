@@ -1,0 +1,26 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "ching-and-ricky-wedding",
+    "description": "",
+    "home_page_url": "http://www.chingricky.com",
+    "feed_url": "http://www.chingricky.com/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "ricky-wong"
+    },
+    "items": [
+        {
+            "id": "http://www.chingricky.com/welcome.html",
+            "url": "http://www.chingricky.com/welcome.html",
+            "title": "welcome",
+            "image": "http://www.chingricky.com/media/posts/1/",
+            "author": {
+                "name": "ricky-wong"
+            },
+            "tags": [
+            ],
+            "date_published": "2018-06-12T11:49:40+08:00",
+            "date_modified": "2018-06-12T11:49:40+08:00"
+        }
+    ]
+}
