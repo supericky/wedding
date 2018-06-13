@@ -1,13 +1,15 @@
 (function ($) {
-// Dropdown menu
+    // Dropdown menu
     $(function () {
         $('.js-navbar__toggle').on('click', function () {
             $('.js-navbar').toggleClass('is-opened');
             $('.js-navbar__toggle').attr('aria-expanded', $('.js-navbar').hasClass('is-opened'));
             return false;
         });
+
         $('.js-navbar a').each(function(i, link) {
             link = $(link);
+
             link.on('touchend', function(e) {
                 if(
                     link.parent().hasClass('has-submenu') &&
@@ -28,7 +30,7 @@
         });
     });
 
-     // iOS :hover fix
+    // iOS :hover fix
     document.addEventListener("touchend", function() {});
 
     // Sticky menu animation
@@ -60,9 +62,11 @@
             if(currentScroll <= headerHeight + 50) {
                 menu.removeClass('is-sticky');
                 menu.parent().css('padding-top', "0px");
+                menu.find('.navbar__menu').css('margin-top', 0);
             } else {
                 menu.addClass('is-sticky');
                 menu.parent().css('padding-top', headerHeight + "px");
+                menu.find('.navbar__menu').css('margin-top', (headerHeight / 2) + "px");
             }
 
             if (currentScroll <= 30) {
@@ -75,7 +79,7 @@
         });
     });
 
-     // Mainmenu improvements
+    // Mainmenu improvements
     $(function ($) {
         var mainmenu = $('.navbar__menu');
         var level0 = mainmenu.children('li');
@@ -165,6 +169,7 @@
         }
     });
 
+
     // Search overlay
     $(function () {
         $('.search__btn').click(function () {
@@ -178,6 +183,5 @@
             $('.search__overlay').removeClass('expanded');
         });
     });
-
 
 })(jQuery);
